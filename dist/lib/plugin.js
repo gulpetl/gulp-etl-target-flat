@@ -11,61 +11,69 @@ log.setLevel((process.env.DEBUG_LEVEL || 'warn'));
 /* This is a model gulp-etl plugin. It is compliant with best practices for Gulp plugins (see
 https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like ),
 but with an additional feature: it accepts a configObj as its first parameter */
-function handlelines(configObj, newHandlers) {
+function tapFlat(configObj, newHandlers) {
     let propsToAdd = configObj.propsToAdd;
     // handleLine could be the only needed piece to be replaced for most gulp-etl plugins
-    const defaultHandleLine = (lineObj) => {
-        for (let propName in propsToAdd) {
-            lineObj[propName] = propsToAdd[propName];
-        }
-        return lineObj;
-    };
     const defaultFinishHandler = () => {
         log.info("The handler has officially ended!");
     };
     const defaultStartHandler = () => {
         log.info("The handler has officially started!");
     };
-    const handleLine = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
     const finishHandler = newHandlers && newHandlers.finishCallback ? newHandlers.finishCallback : defaultFinishHandler;
     let startHandler = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
-    function newTransformer() {
-        let transformer = through2.obj(); // new transform stream, in object mode
-        transformer._onFirstLine = true; // we have to handle the first line differently, so we set a flag
-        // since we're counting on split to have already been called upstream, dataLine will be a single line at a time
-        transformer._transform = function (dataLine, encoding, callback) {
-            let returnErr = null;
-            try {
-                let dataObj;
-                let handledObj;
-                if (dataLine.trim() != "") {
-                    dataObj = JSON.parse(dataLine);
-                    handledObj = handleLine(dataObj);
-                }
-                if (handledObj) {
-                    let handledLine = JSON.stringify(handledObj);
-                    if (this._onFirstLine) {
-                        this._onFirstLine = false;
-                    }
-                    else {
-                        handledLine = '\n' + handledLine;
-                    }
-                    log.debug(handledLine);
-                    this.push(handledLine);
-                }
-            }
-            catch (err) {
-                returnErr = new PluginError(PLUGIN_NAME, err);
-            }
-            callback(returnErr);
-        };
-        return transformer;
-    }
     // creating a stream through which each file will pass
     // see https://stackoverflow.com/a/52432089/5578474 for a note on the "this" param
     const strm = through2.obj(function (file, encoding, cb) {
         const self = this;
         let returnErr = null;
+        file.extname = '.ndjson';
+        // set the stream name to the file name (without extension)
+        let streamName = file.stem;
+        //This is a default function that will create one property strValue for the record
+        const defaultHandleLine = (string1) => {
+            let lineObj = {};
+            lineObj.strValue = string1;
+            return lineObj;
+        };
+        const handleLine = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
+        function newTransformer() {
+            let transformer = through2.obj(); // new transform stream, in object mode
+            transformer._onFirstLine = true; // we have to handle the first line differently, so we set a flag
+            // since we're counting on split to have already been called upstream, dataLine will be a single line at a time
+            transformer._transform = function (dataLine, encoding, callback) {
+                let returnErr = null;
+                try {
+                    let dataObj;
+                    let handledObj;
+                    try {
+                        if (dataLine.trim() != "") {
+                            handledObj = handleLine(dataLine);
+                        }
+                    }
+                    catch (err) {
+                        console.log("Error is here");
+                    }
+                    if (handledObj) {
+                        /** wrap incoming recordObject in a Singer RECORD Message object*/
+                        let handledLine = JSON.stringify({ type: "RECORD", stream: streamName, record: handledObj });
+                        if (this._onFirstLine) {
+                            this._onFirstLine = false;
+                        }
+                        else {
+                            handledLine = '\n' + handledLine;
+                        }
+                        log.debug(handledLine);
+                        this.push(handledLine);
+                    }
+                }
+                catch (err) {
+                    returnErr = new PluginError(PLUGIN_NAME, err);
+                }
+                callback(returnErr);
+            };
+            return transformer;
+        }
         if (file.isNull()) {
             // return empty file
             return cb(returnErr, file);
@@ -78,17 +86,11 @@ function handlelines(configObj, newHandlers) {
             // we'll call handleLine on each line
             for (let dataIdx in strArray) {
                 try {
-                    let lineObj;
                     let tempLine;
                     if (strArray[dataIdx].trim() != "") {
-                        lineObj = JSON.parse(strArray[dataIdx]);
-                        tempLine = handleLine(lineObj);
-                        // add newline before every line execept the first
-                        if (dataIdx != "0") {
-                            resultArray.push('\n');
-                        }
+                        tempLine = handleLine(strArray[dataIdx]);
                         if (tempLine) {
-                            resultArray.push(JSON.stringify(tempLine));
+                            resultArray.push(JSON.stringify({ type: "RECORD", stream: streamName, record: tempLine }));
                         }
                     }
                 }
@@ -96,7 +98,7 @@ function handlelines(configObj, newHandlers) {
                     returnErr = new PluginError(PLUGIN_NAME, err);
                 }
             }
-            let data = resultArray.join('');
+            let data = resultArray.join('\n');
             log.debug(data);
             file.contents = Buffer.from(data);
             finishHandler();
@@ -133,5 +135,5 @@ function handlelines(configObj, newHandlers) {
     startHandler();
     return strm;
 }
-exports.handlelines = handlelines;
+exports.tapFlat = tapFlat;
 //# sourceMappingURL=plugin.js.map

@@ -1,7 +1,7 @@
 {
-  "name": "gulp-etl-handlelines",
-  "version": "1.0.3",
-  "repository": "https://github.com/gulpetl/gulp-etl-handlelines",
+  "name": "gulp-etl-target-flat",
+  "version": "1.0.0",
+  "repository": "https://github.com/gulpetl/gulp-etl-target-flat",
   "description": "Utility gulp-etl plugin",
   "main": "dist/js/plugin.js",
   "typings": "dist/types/plugin.d.ts",
@@ -13,6 +13,9 @@
     "test": "jest"
   },
   "author": "peterl@sbcotton.com",
+  "contributors": [
+    "Manoj Khatri"
+  ],
   "license": "MIT",
   "keywords": [
     "gulpplugin",
@@ -22,7 +25,7 @@
   "dependencies": {
     "from2": "^2.3.0",
     "gulp-error-handle": "^1.0.1",
-    "loglevel": "^1.6.1",
+    "loglevel": "^1.6.3",
     "pkginfo": "^0.4.1",
     "plugin-error": "^1.0.1",
     "split2": "^3.1.1",
@@ -34,17 +37,17 @@
     "@types/gulp-rename": "0.0.33",
     "@types/jest": "^23.3.14",
     "@types/loglevel": "^1.5.4",
-    "@types/node": "^10.14.6",
+    "@types/node": "^10.14.9",
     "@types/vinyl": "^2.0.3",
     "@types/vinyl-paths": "0.0.31",
     "del": "^4.1.1",
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-rename": "^1.4.0",
-    "jest": "^24.7.1",
-    "jest-spec-reporter": "^1.0.5",
+    "jest": "^24.8.0",
+    "jest-spec-reporter": "^1.0.6",
     "ts-jest": "^24.0.2",
     "ts-node": "^7.0.1",
-    "typescript": "^3.4.5",
+    "typescript": "^3.5.2",
     "vinyl-paths": "^2.1.0"
   }
 }

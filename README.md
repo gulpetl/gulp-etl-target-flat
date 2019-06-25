@@ -1,8 +1,7 @@
 # gulp-etl-target-flat #
 
-*(this plugin is being developed from *[gulp-etl-handlelines](https://github.com/gulpetl/gulp-etl-handlelines/)*. The original readme from gulp-etl-handlelines is below)*
 
-Utility function providing a "handleline" callback which is called for every record in a **gulp-etl** **Message Stream**. This very powerful functionality can be used for filtering, transformations, counters, etc. and is a nice way to add functionality without building a full module. It also powers a number of our other modules, greatly simplifying their development by handling the "boilerplate" code needed for a module. Works in both buffer and streaming mode.
+The job of this plugin is to take an ndjson file from a user and emit out a flat file of any kind. The plugin works in both buffer mode and stream mode. The function allows the user to create their own custom parser by using transform call back or they can simply use the default parser by using default call back
 
 This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp](https://gulpjs.com/) plugin. **data-etl** plugins processes [ndjson](http://ndjson.org/) data streams/files which we call **Message Streams** and which are compliant with the [Singer specification](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#output). Message Streams look like this:
 
@@ -19,8 +18,8 @@ This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp
 **data-etl** plugins accept a configObj as its first parameter. The configObj
 will contain any info the plugin needs.
 
-In addition, this plugin also accepts a TransformCallback function. That function will receive a 
-Singer message object (a [RECORD](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#record-message), [SCHEMA](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#schema-message) or [STATE](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#state-message)) and is expected to return either the Singer message object (whether transformed or unchanged) to be passed downstream, or ```null``` to remove the message from the stream).
+As stated above, this plugin takes a trasnform call back function. That function will receive a 
+Singer message object (a [RECORD](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#record-message), [SCHEMA](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#schema-message) or [STATE](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#state-message)) and is expected to return either string to be passed downstream, or ```null``` to remove the message from the stream).
 
 This plugin also accepts a FinishCallback and StartCallback, which are functions that are executed before and after the TransformCallback. The FinishCallback can be used to manage data stored collected from the stream. 
 
@@ -36,25 +35,27 @@ Send in callbacks as a second parameter in the form:
 
 ##### Sample gulpfile.js
 ```
-var handleLines = require('gulp-etl-handlelines').handlelines
+var handleLines = require('gulp-etl-tap-flat').tapFlat
 // for TypeScript use this line instead:
-// import { handlinelines } from 'gulp-etl-handlelines'
+// import { tapFlat } from 'gulp-etl-tap-flat'
 
-const linehandler = (lineObj) => {
-    // return null to remove this line
-    if (!lineObj.record || lineObj.record["TestValue"] == 'illegalValue') {return null}
-    
-    // optionally make changes to lineObj
-    lineObj.record["NewProperty"] = "asdf"
-
-    // return the changed lineObj
-    return lineObj
+const targettxt = (lineObj: any): string | null => {
+ 
+    let tempString1 = lineObj.propertyA
+    let tempString2 = lineObj.propertyB
+    let tempString3 = lineObj.propertyC
+    let finalString = tempString1 + " " + tempString2 + " " + tempString3 
+    return finalString;
 }
 
 exports.default = function() {
     return src('data/*.ndjson')
     // pipe the files through our handlelines plugin
-    .pipe(handlelines({}, { transformCallback: linehandler }))
+    .pipe(targetFlat({}, {transformCallback: targetLog}))
+    .on('data', function (file:Vinyl) {
+        file.extname='.txt';
+        log.info('Finished processing on ' + file.basename)
+       }) 
     .pipe(dest('output/'));
 }
 ```
@@ -83,3 +84,6 @@ We are using [Jest](https://facebook.github.io/jest/docs/en/getting-started.html
 
 
 Note: This document is written in [Markdown](https://daringfireball.net/projects/markdown/). We like to use [Typora](https://typora.io/) and [Markdown Preview Plus](https://chrome.google.com/webstore/detail/markdown-preview-plus/febilkbfcbhebfnokafefeacimjdckgl?hl=en-US) for our Markdown work..
+
+
+
