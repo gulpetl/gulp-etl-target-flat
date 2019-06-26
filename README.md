@@ -39,7 +39,7 @@ var handleLines = require('gulp-etl-tap-flat').tapFlat
 // for TypeScript use this line instead:
 // import { tapFlat } from 'gulp-etl-tap-flat'
 
-const targettxt = (lineObj: any): string | null => {
+const targetlog = (lineObj: any): string | null => {
  
     let tempString1 = lineObj.propertyA
     let tempString2 = lineObj.propertyB
@@ -53,7 +53,7 @@ exports.default = function() {
     // pipe the files through our handlelines plugin
     .pipe(targetFlat({}, {transformCallback: targetLog}))
     .on('data', function (file:Vinyl) {
-        file.extname='.txt';
+        file.extname='.log';
         log.info('Finished processing on ' + file.basename)
        }) 
     .pipe(dest('output/'));
@@ -61,10 +61,10 @@ exports.default = function() {
 ```
 
 ### Changing the extension of the destination file
-Considering there are many kinds of flat file, this plugin by default provides a .txt file but users can also set their own file extensions by adding this simply chunk of code inside the Gulp File. For example, in this chunk of code, the file extension is set to one of the most common types of flat files, CSV file. .txt extension.
+Considering there are many kinds of flat file, this plugin by default provides a .txt file but users can also set their own file extensions by adding this simply chunk of code inside the Gulp File. For example, in this chunk of code, the file extension is set .log
 ```
 .on('data', function (file:Vinyl) {
-     file.extname='.csv';
+     file.extname='.log';
      log.info('Finished processing on ' + file.basename)
     })  
 ```
