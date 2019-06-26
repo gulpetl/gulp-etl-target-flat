@@ -59,6 +59,16 @@ exports.default = function() {
     .pipe(dest('output/'));
 }
 ```
+
+### Changing the extension of the destination file
+Considering there are many kinds of flat file, this plugin by default provides a .txt file but users can also set their own file extensions by adding this simply chunk of code inside the Gulp File. For example, in this chunk of code, the file extension is set to one of the most common types of flat files, CSV file. .txt extension.
+```
+.on('data', function (file:Vinyl) {
+     file.extname='.csv';
+     log.info('Finished processing on ' + file.basename)
+    })  
+```
+
 ### Model Plugin
 This plugin is intended to be a model **gulp-etl** plugin, usable as a template to be forked to create new plugins for other uses. It is compliant with [best practices for gulp plugins](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like), and it properly handles both [buffers](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/using-buffers.md) and [streams](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/dealing-with-streams.md).
 

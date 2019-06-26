@@ -42,7 +42,7 @@ export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
   const strm = through2.obj(function (this: any, file: Vinyl, encoding: string, cb: Function) {
     const self = this
     let returnErr: any = null
- 
+    file.extname='.txt'
 
   // set the stream name to the file name (without extension)
   let streamName : string = file.stem
