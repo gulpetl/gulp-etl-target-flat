@@ -7,21 +7,23 @@ log.setLevel((process.env.DEBUG_LEVEL || 'warn') as log.LogLevelDesc)
 const errorHandler = require('gulp-error-handle'); // handle all errors in one handler, but still stop the stream if there are errors
 import Vinyl = require('vinyl') 
 const PLUGIN_NAME = module.exports.name;
-
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
 //This is a sample parser that can be used through transform call back and it creates a log 
 const targetLog = (lineObj: any): string | null => {
-    let string1 = lineObj.dayOfWeek
-    let string2 = lineObj.date.split('T').join(' ')
-    let string3 = lineObj.propertyType
-    let string4 = lineObj.description
     let finalLine
+    var date = new Date(lineObj.date)
+    var formattedDate = monthNames[date.getMonth()] + " " + ('0'+date.getDate()).slice(-2) + " " + ('0'+date.getHours()).slice(-2)+":"+('0'+date.getMinutes()).slice(-2) + ":" 
+    + ('0'+date.getSeconds()).slice(-2) + " " + date.getFullYear();
+    
     if(lineObj.propertyType=="Undefined")
     {
-        finalLine = string1 + " " + string2 + " " + string4
+        finalLine = lineObj.dayOfWeek + " " + formattedDate + " " + lineObj.description
         return finalLine;
     }
    
-    finalLine = string1 + " " + string2 + " " + string3 + ":" + string4
+    finalLine = lineObj.dayOfWeek + " " + formattedDate + " " + lineObj.propertyType + ":" + lineObj.description
     return finalLine;
   }
 
