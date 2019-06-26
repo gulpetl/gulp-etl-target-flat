@@ -11,7 +11,7 @@ log.setLevel((process.env.DEBUG_LEVEL || 'warn'));
 /* This is a model gulp-etl plugin. It is compliant with best practices for Gulp plugins (see
 https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like ),
 but with an additional feature: it accepts a configObj as its first parameter */
-function tapFlat(configObj, newHandlers) {
+function targetFlat(configObj, newHandlers) {
     let propsToAdd = configObj.propsToAdd;
     // handleLine could be the only needed piece to be replaced for most gulp-etl plugins
     const defaultFinishHandler = () => {
@@ -27,14 +27,13 @@ function tapFlat(configObj, newHandlers) {
     const strm = through2.obj(function (file, encoding, cb) {
         const self = this;
         let returnErr = null;
-        file.extname = '.ndjson';
+        file.extname = '.txt';
         // set the stream name to the file name (without extension)
         let streamName = file.stem;
         //This is a default function that will create one property strValue for the record
-        const defaultHandleLine = (string1) => {
-            let lineObj = {};
-            lineObj.strValue = string1;
-            return lineObj;
+        const defaultHandleLine = (lineObj) => {
+            let strValue = lineObj.propertyType + ":" + lineObj.description;
+            return strValue;
         };
         const handleLine = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
         function newTransformer() {
@@ -48,7 +47,8 @@ function tapFlat(configObj, newHandlers) {
                     let handledObj;
                     try {
                         if (dataLine.trim() != "") {
-                            handledObj = handleLine(dataLine);
+                            dataObj = JSON.parse(dataLine);
+                            handledObj = handleLine(dataObj.record);
                         }
                     }
                     catch (err) {
@@ -56,7 +56,7 @@ function tapFlat(configObj, newHandlers) {
                     }
                     if (handledObj) {
                         /** wrap incoming recordObject in a Singer RECORD Message object*/
-                        let handledLine = JSON.stringify({ type: "RECORD", stream: streamName, record: handledObj });
+                        let handledLine = handledObj;
                         if (this._onFirstLine) {
                             this._onFirstLine = false;
                         }
@@ -86,11 +86,13 @@ function tapFlat(configObj, newHandlers) {
             // we'll call handleLine on each line
             for (let dataIdx in strArray) {
                 try {
+                    let lineObj;
                     let tempLine;
                     if (strArray[dataIdx].trim() != "") {
-                        tempLine = handleLine(strArray[dataIdx]);
+                        lineObj = JSON.parse(strArray[dataIdx]);
+                        tempLine = handleLine(lineObj.record);
                         if (tempLine) {
-                            resultArray.push(JSON.stringify({ type: "RECORD", stream: streamName, record: tempLine }));
+                            resultArray.push(tempLine);
                         }
                     }
                 }
@@ -135,5 +137,5 @@ function tapFlat(configObj, newHandlers) {
     startHandler();
     return strm;
 }
-exports.tapFlat = tapFlat;
+exports.targetFlat = targetFlat;
 //# sourceMappingURL=plugin.js.map
