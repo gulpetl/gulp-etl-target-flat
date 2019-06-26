@@ -50,7 +50,7 @@ export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
   //This is a default function that will create one property strValue for the record
   const defaultHandleLine = (lineObj: any): string | null => {
   
-    let strValue = JSON.stringify(lineObj)
+    let strValue = lineObj.propertyType + ":" + lineObj.description
     return strValue;
   }
   
