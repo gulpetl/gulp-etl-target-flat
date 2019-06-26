@@ -1,7 +1,7 @@
 # gulp-etl-target-flat #
 
 
-The job of this plugin is to take an ndjson file from a user and emit out a flat file of any kind. The plugin works in both buffer mode and stream mode. The function allows the user to create their own custom parser by using transform call back or they can simply use the default parser by using default call back
+The job of this plugin is to take an JSON message stream from a user and emit out a flat file of any kind the user desires. The plugin works in both buffer mode and stream mode. The plugin allows the user to create their own custom parser by using transform call back or they can simply use the default parser by using default call back
 
 This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp](https://gulpjs.com/) plugin. **data-etl** plugins processes [ndjson](http://ndjson.org/) data streams/files which we call **Message Streams** and which are compliant with the [Singer specification](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#output). Message Streams look like this:
 
