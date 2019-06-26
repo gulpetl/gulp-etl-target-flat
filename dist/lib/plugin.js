@@ -12,7 +12,6 @@ log.setLevel((process.env.DEBUG_LEVEL || 'warn'));
 https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like ),
 but with an additional feature: it accepts a configObj as its first parameter */
 function targetFlat(configObj, newHandlers) {
-    let propsToAdd = configObj.propsToAdd;
     // handleLine could be the only needed piece to be replaced for most gulp-etl plugins
     const defaultFinishHandler = () => {
         log.info("The handler has officially ended!");
@@ -20,8 +19,14 @@ function targetFlat(configObj, newHandlers) {
     const defaultStartHandler = () => {
         log.info("The handler has officially started!");
     };
+    //This is a default function that will create one property strValue for the record
+    const defaultHandleLine = (lineObj) => {
+        let strValue = lineObj.propertyType + ":" + lineObj.description;
+        return strValue;
+    };
     const finishHandler = newHandlers && newHandlers.finishCallback ? newHandlers.finishCallback : defaultFinishHandler;
-    let startHandler = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
+    const startHandler = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
+    const handleLine = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
     // creating a stream through which each file will pass
     // see https://stackoverflow.com/a/52432089/5578474 for a note on the "this" param
     const strm = through2.obj(function (file, encoding, cb) {
@@ -30,12 +35,6 @@ function targetFlat(configObj, newHandlers) {
         file.extname = '.txt';
         // set the stream name to the file name (without extension)
         let streamName = file.stem;
-        //This is a default function that will create one property strValue for the record
-        const defaultHandleLine = (lineObj) => {
-            let strValue = lineObj.propertyType + ":" + lineObj.description;
-            return strValue;
-        };
-        const handleLine = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
         function newTransformer() {
             let transformer = through2.obj(); // new transform stream, in object mode
             transformer._onFirstLine = true; // we have to handle the first line differently, so we set a flag

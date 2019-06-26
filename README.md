@@ -1,9 +1,9 @@
 # gulp-etl-target-flat #
 
 
-The job of this plugin is to take an JSON message stream from a user and emit out a flat file of any kind the user desires. The plugin works in both buffer mode and stream mode. The plugin allows the user to create their own custom parser by using transform call back or they can simply use the default parser by using default call back
+Takes a JSON Message Stream and emits a flat file of any kind, including fixed width or formats with special delimiters. The plugin works in both buffer mode and stream mode, and allows the user to create their own custom parser by using the transformCallback function.
 
-This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp](https://gulpjs.com/) plugin. **data-etl** plugins processes [ndjson](http://ndjson.org/) data streams/files which we call **Message Streams** and which are compliant with the [Singer specification](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#output). Message Streams look like this:
+This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp](https://gulpjs.com/) plugin. **gulp-etl** plugins processes [ndjson](http://ndjson.org/) data streams/files which we call **Message Streams** and which are compliant with the [Singer specification](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#output). Message Streams look like this:
 
 ```
 {"type": "SCHEMA", "stream": "users", "key_properties": ["id"], "schema": {"required": ["id"], "type": "object", "properties": {"id": {"type": "integer"}}}}
@@ -15,13 +15,11 @@ This is a **[gulp-etl](https://gulpetl.com/)** plugin, and as such it is a [gulp
 ```
 
 ### Usage
-**data-etl** plugins accept a configObj as its first parameter. The configObj
-will contain any info the plugin needs.
+**gulp-etl** plugins accept a configObj as the first parameter, but for **gulp-etl-target-flat**  the work is mainly done by the transformCallback, so it has no options to set and it ignores the configObj.
 
-As stated above, this plugin takes a trasnform call back function. That function will receive a 
-Singer message object (a [RECORD](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#record-message), [SCHEMA](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#schema-message) or [STATE](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#state-message)) and is expected to return either string to be passed downstream, or ```null``` to remove the message from the stream).
+The user-provided transformCallback function will receive a Singer message object (a [RECORD](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#record-message), [SCHEMA](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#schema-message) or [STATE](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md#state-message)) and is expected to return either a string to be passed downstream, or ```null``` to remove the message from the stream).
 
-This plugin also accepts a FinishCallback and StartCallback, which are functions that are executed before and after the TransformCallback. The FinishCallback can be used to manage data stored collected from the stream. 
+This plugin also accepts finishCallback and startCallback, which are functions that are executed before and after transformCallback. The finishCallback can be used to manage data stored collected from the stream. 
 
 Send in callbacks as a second parameter in the form: 
 
@@ -35,17 +33,16 @@ Send in callbacks as a second parameter in the form:
 
 ##### Sample gulpfile.js
 ```
+/* Create a flat file that is delimited by a custom string */
+
 var handleLines = require('gulp-etl-tap-flat').tapFlat
 // for TypeScript use this line instead:
 // import { tapFlat } from 'gulp-etl-tap-flat'
 
+var delimiter = '~~~' 
 const targetlog = (lineObj: any): string | null => {
- 
-    let tempString1 = lineObj.propertyA
-    let tempString2 = lineObj.propertyB
-    let tempString3 = lineObj.propertyC
-    let finalString = tempString1 + " " + tempString2 + " " + tempString3 
-    return finalString;
+    var flatString = lineObj.propertyA + delimiter + lineObj.propertyB + delimiter + lineObj.propertyC
+    return flatString;
 }
 
 exports.default = function() {
@@ -61,18 +58,13 @@ exports.default = function() {
 ```
 
 ### Changing the extension of the destination file
-Considering there are many kinds of flat file, this plugin by default provides a .txt file but users can also set their own file extensions by adding this simply chunk of code inside the Gulp File. For example, in this chunk of code, the file extension is set .log
+Considering there are many kinds of flat file, this plugin by default uses a .txt file extension but users can also set their own file extensions by adding this simple chunk of code inside the gulpfile.
 ```
 .on('data', function (file:Vinyl) {
      file.extname='.log';
      log.info('Finished processing on ' + file.basename)
     })  
 ```
-
-### Model Plugin
-This plugin is intended to be a model **gulp-etl** plugin, usable as a template to be forked to create new plugins for other uses. It is compliant with [best practices for gulp plugins](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like), and it properly handles both [buffers](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/using-buffers.md) and [streams](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/dealing-with-streams.md).
-
-
 
 ### Quick Start
 * Dependencies: 

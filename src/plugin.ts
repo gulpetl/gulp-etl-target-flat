@@ -6,7 +6,7 @@ const pkginfo = require('pkginfo')(module); // project package.json info into mo
 const PLUGIN_NAME = module.exports.name;
 import * as loglevel from 'loglevel'
 const log = loglevel.getLogger(PLUGIN_NAME) // get a logger instance based on the project name
-log.setLevel((process.env.DEBUG_LEVEL || 'warn') as log.LogLevelDesc)
+log.setLevel((process.env.DEBUG_LEVEL || 'warn') as loglevel.LogLevelDesc)
 
 export type TransformCallback = (lineObj: any) => string | null
 export type FinishCallback = () => void
@@ -22,7 +22,6 @@ export type allCallbacks = {
 https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like ),
 but with an additional feature: it accepts a configObj as its first parameter */
 export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
-  let propsToAdd = configObj.propsToAdd
 
   // handleLine could be the only needed piece to be replaced for most gulp-etl plugins
   const defaultFinishHandler = (): void => {
@@ -32,10 +31,16 @@ export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
     log.info("The handler has officially started!");
   }
   
-  const finishHandler: FinishCallback = newHandlers && newHandlers.finishCallback ? newHandlers.finishCallback : defaultFinishHandler;
-  let startHandler: StartCallback = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
+  //This is a default function that will create one property strValue for the record
+  const defaultHandleLine = (lineObj: any): string | null => {
 
-  
+    let strValue = lineObj.propertyType + ":" + lineObj.description
+    return strValue;
+  }
+
+  const finishHandler: FinishCallback = newHandlers && newHandlers.finishCallback ? newHandlers.finishCallback : defaultFinishHandler;
+  const startHandler: StartCallback = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
+  const handleLine: TransformCallback = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
 
   // creating a stream through which each file will pass
   // see https://stackoverflow.com/a/52432089/5578474 for a note on the "this" param
@@ -45,16 +50,7 @@ export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
     file.extname='.txt'
 
   // set the stream name to the file name (without extension)
-  let streamName : string = file.stem
-  
-  //This is a default function that will create one property strValue for the record
-  const defaultHandleLine = (lineObj: any): string | null => {
-  
-    let strValue = lineObj.propertyType + ":" + lineObj.description
-    return strValue;
-  }
-  
-  const handleLine: TransformCallback = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
+  let streamName : string = file.stem  
 
   function newTransformer() {
       let transformer = through2.obj(); // new transform stream, in object mode
