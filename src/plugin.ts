@@ -8,7 +8,7 @@ import * as loglevel from 'loglevel'
 const log = loglevel.getLogger(PLUGIN_NAME) // get a logger instance based on the project name
 log.setLevel((process.env.DEBUG_LEVEL || 'warn') as log.LogLevelDesc)
 
-export type TransformCallback = (lineObj: object) => object | null
+export type TransformCallback = (lineObj: any) => string | null
 export type FinishCallback = () => void
 export type StartCallback = () => void
 export type allCallbacks = {
@@ -17,69 +17,81 @@ export type allCallbacks = {
   startCallback?: StartCallback
 }
 
+
 /* This is a model gulp-etl plugin. It is compliant with best practices for Gulp plugins (see
 https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/guidelines.md#what-does-a-good-plugin-look-like ),
 but with an additional feature: it accepts a configObj as its first parameter */
-export function handlelines(configObj: any, newHandlers?: allCallbacks) {
+export function targetFlat(configObj: any, newHandlers?: allCallbacks) {
   let propsToAdd = configObj.propsToAdd
 
   // handleLine could be the only needed piece to be replaced for most gulp-etl plugins
-  const defaultHandleLine = (lineObj: object): object | null => {
-    for (let propName in propsToAdd) {
-      (lineObj as any)[propName] = propsToAdd[propName]
-    }
-    return lineObj
-  }
   const defaultFinishHandler = (): void => {
     log.info("The handler has officially ended!");
   }
   const defaultStartHandler = () => {
     log.info("The handler has officially started!");
   }
-  const handleLine: TransformCallback = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
+  
   const finishHandler: FinishCallback = newHandlers && newHandlers.finishCallback ? newHandlers.finishCallback : defaultFinishHandler;
   let startHandler: StartCallback = newHandlers && newHandlers.startCallback ? newHandlers.startCallback : defaultStartHandler;
 
   
-  function newTransformer() {
-    let transformer = through2.obj(); // new transform stream, in object mode
-    transformer._onFirstLine = true; // we have to handle the first line differently, so we set a flag
-    // since we're counting on split to have already been called upstream, dataLine will be a single line at a time
-    transformer._transform = function (dataLine: string, encoding: string, callback: Function) {
-      let returnErr: any = null
-      try {
-        let dataObj
-        let handledObj
-        if (dataLine.trim() != "") {
-          dataObj = JSON.parse(dataLine)
-          handledObj = handleLine(dataObj)
-        }
-        if (handledObj) {
-          let handledLine = JSON.stringify(handledObj)
-          if (this._onFirstLine) {
-            this._onFirstLine = false;
-          }
-          else {
-            handledLine = '\n' + handledLine;
-          }
-          log.debug(handledLine)
-          this.push(handledLine);
-        }
-      } catch (err) {
-        returnErr = new PluginError(PLUGIN_NAME, err);
-      }
-
-      callback(returnErr)
-    }
-    return transformer
-  }
-
 
   // creating a stream through which each file will pass
   // see https://stackoverflow.com/a/52432089/5578474 for a note on the "this" param
   const strm = through2.obj(function (this: any, file: Vinyl, encoding: string, cb: Function) {
     const self = this
     let returnErr: any = null
+    file.extname='.txt'
+
+  // set the stream name to the file name (without extension)
+  let streamName : string = file.stem
+  
+  //This is a default function that will create one property strValue for the record
+  const defaultHandleLine = (lineObj: any): string | null => {
+  
+    let strValue = lineObj.propertyType + ":" + lineObj.description
+    return strValue;
+  }
+  
+  const handleLine: TransformCallback = newHandlers && newHandlers.transformCallback ? newHandlers.transformCallback : defaultHandleLine;
+
+  function newTransformer() {
+      let transformer = through2.obj(); // new transform stream, in object mode
+      transformer._onFirstLine = true; // we have to handle the first line differently, so we set a flag
+      // since we're counting on split to have already been called upstream, dataLine will be a single line at a time
+      transformer._transform = function (dataLine: string, encoding: string, callback: Function) {
+        let returnErr: any = null
+        try {
+          
+          let dataObj
+          let handledObj
+          try{if (dataLine.trim() != "") {
+            dataObj = JSON.parse(dataLine)
+            handledObj = handleLine(dataObj.record)
+          }}catch(err){
+             console.log("Error is here");
+          }
+          if (handledObj) {
+            /** wrap incoming recordObject in a Singer RECORD Message object*/
+            let handledLine = handledObj
+            if (this._onFirstLine) {
+              this._onFirstLine = false;
+            }
+            else {
+              handledLine = '\n' + handledLine;
+            }
+            log.debug(handledLine)
+            this.push(handledLine);
+          }
+        } catch (err) {
+          returnErr = new PluginError(PLUGIN_NAME, err);
+        }
+  
+        callback(returnErr)
+      }
+      return transformer
+    }
 
     if (file.isNull()) {
       // return empty file
@@ -97,20 +109,17 @@ export function handlelines(configObj: any, newHandlers?: allCallbacks) {
           let tempLine
           if (strArray[dataIdx].trim() != "") {
             lineObj = JSON.parse(strArray[dataIdx])
-            tempLine = handleLine(lineObj)
-            // add newline before every line execept the first
-            if (dataIdx != "0") {
-              resultArray.push('\n');
-            }
+            tempLine = handleLine(lineObj.record)
             if (tempLine){
-              resultArray.push(JSON.stringify(tempLine));
+              resultArray.push(tempLine);
+              
             }
           }
         } catch (err) {
           returnErr = new PluginError(PLUGIN_NAME, err);
         }
       }
-      let data:string = resultArray.join('')
+      let data:string = resultArray.join('\n')
       log.debug(data)
       file.contents = Buffer.from(data)
 
@@ -120,9 +129,8 @@ export function handlelines(configObj: any, newHandlers?: allCallbacks) {
       cb(returnErr, file)
     }
     else if (file.isStream()) {
-
       try {
-      file.contents = file.contents
+         file.contents = file.contents
         // split plugin will split the file into lines
         .pipe(split())
         .pipe(newTransformer())

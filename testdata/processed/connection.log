@@ -1,0 +1,678 @@
+Thu Jun 06 15:47:44 2017 OpenVPN 2.4.4 x86_64-w64-mingw32 [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] built on Sep 26 2017
+Thu Jun 06 15:47:44 2017 Windows version 6.2 (Windows 8 or greater) 64bit
+Thu Jun 06 15:47:44 2017 library versions: OpenSSL 1.0.2l  25 May 2017, LZO 2.10
+Thu Jun 06 15:47:44 2017 WARNING: --ns-cert-type is DEPRECATED.  Use --remote-cert-tls instead.
+Thu Jun 06 15:47:44 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:44 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:44 2017 Could not determine IPv4/IPv6 protocol
+Thu Jun 06 15:47:44 2017 SIGUSR1[soft,init_instance] received, process restarting
+Thu Jun 06 15:47:44 2017 Restart pause, 5 second(s)
+Thu Jun 06 15:47:49 2017 WARNING: --ns-cert-type is DEPRECATED.  Use --remote-cert-tls instead.
+Thu Jun 06 15:47:49 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:49 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:49 2017 Could not determine IPv4/IPv6 protocol
+Thu Jun 06 15:47:49 2017 SIGUSR1[soft,init_instance] received, process restarting
+Thu Jun 06 15:47:49 2017 Restart pause, 5 second(s)
+Thu Jun 06 15:47:54 2017 WARNING: --ns-cert-type is DEPRECATED.  Use --remote-cert-tls instead.
+Thu Jun 06 15:47:54 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:54 2017 RESOLVE: Cannot resolve host address: mywebsite.com:1194 (No such host is known. )
+Thu Jun 06 15:47:54 2017 Could not determine IPv4/IPv6 protocol
+Thu Jun 06 15:47:54 2017 SIGUSR1[soft,init_instance] received, process restarting
+Thu Jun 06 15:47:54 2017 Restart pause, 5 second(s)
+Thu Jun 06 15:47:59 2017 WARNING: --ns-cert-type is DEPRECATED.  Use --remote-cert-tls instead.
+Thu Jun 06 15:47:59 2017 TCP/UDP: Preserving recently used remote address: [AF_INET]12.34.56.78:1194
+Thu Jun 06 15:47:59 2017 Socket Buffers: R=[65536->65536] S=[65536->65536]
+Thu Jun 06 15:47:59 2017 UDP link local: (not bound)
+Thu Jun 06 15:47:59 2017 UDP link remote: [AF_INET]12.34.56.78:1194
+Thu Jun 06 15:47:59 2017 TLS: Initial packet from [AF_INET]12.34.56.78:1194, sid=3145ce64 c5cbe4db
+Thu Jun 06 15:47:59 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 15:47:59 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 15:47:59 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 15:47:59 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 15:47:59 2017 [mywebsite.com] Peer Connection Initiated with [AF_INET]12.34.56.78:1194
+Thu Jun 06 15:48:01 2017 SENT CONTROL [mywebsite.com]: 'PUSH_REQUEST' (status=1)
+Thu Jun 06 15:48:01 2017 PUSH: Received control message: 'PUSH_REPLY,route-gateway 100.26.245.1,topology subnet,ping 10,ping-restart 120,ifconfig 100.26.245.5 255.255.255.0,peer-id 18,cipher AES-256-GCM'
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: timers and/or timeouts modified
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: --ifconfig/up options modified
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: route-related options modified
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: peer-id set
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: adjusting link_mtu to 1625
+Thu Jun 06 15:48:01 2017 OPTIONS IMPORT: data channel crypto options modified
+Thu Jun 06 15:48:01 2017 Data Channel: using negotiated cipher 'AES-256-GCM'
+Thu Jun 06 15:48:01 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 15:48:01 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 15:48:01 2017 interactive service msg_channel=0
+Thu Jun 06 15:48:01 2017 open_tun
+Thu Jun 06 15:48:01 2017 TAP-WIN32 device [Ethernet 2] opened: \\.\Global\{32996445-A040-4960-8531-A9763A222A7E}.tap
+Thu Jun 06 15:48:01 2017 TAP-Windows Driver Version 9.21 
+Thu Jun 06 15:48:01 2017 Set TAP-Windows TUN subnet mode network/local/netmask = 100.26.245.0/100.26.245.5/255.255.255.0 [SUCCEEDED]
+Thu Jun 06 15:48:01 2017 Notified TAP-Windows driver to set a DHCP IP/netmask of 100.26.245.5/255.255.255.0 on interface {32996445-A040-4960-8531-A9763A222A7E} [DHCP-serv: 100.26.245.254, lease-time: 31536000]
+Thu Jun 06 15:48:01 2017 Successful ARP Flush on interface [5] {32996445-A040-4960-8531-A9763A222A7E}
+Thu Jun 06 15:48:01 2017 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Thu Jun 06 15:48:06 2017 TEST ROUTES: 0/0 succeeded len=0 ret=1 a=0 u/d=up
+Thu Jun 06 15:48:06 2017 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Thu Jun 06 15:48:06 2017 Initialization Sequence Completed
+Thu Jun 06 16:47:59 2017 TLS: soft reset sec=0 bytes=89540/-1 pkts=890/0
+Thu Jun 06 16:47:59 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 16:47:59 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 16:47:59 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 16:48:00 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 16:48:00 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 16:48:00 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 17:47:59 2017 TLS: tls_process: killed expiring key
+Thu Jun 06 17:48:01 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 17:48:01 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 17:48:01 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 17:48:01 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 17:48:01 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 17:48:01 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 18:48:00 2017 TLS: tls_process: killed expiring key
+Thu Jun 06 18:48:01 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 18:48:01 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 18:48:01 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 18:48:01 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 18:48:01 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 18:48:01 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 19:48:00 2017 TLS: tls_process: killed expiring key
+Thu Jun 06 19:48:01 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 19:48:01 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 19:48:01 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 19:48:01 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 19:48:01 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 19:48:01 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 20:48:02 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 20:48:02 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 20:48:02 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 20:48:02 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 20:48:02 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 20:48:02 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 21:48:01 2017 TLS: tls_process: killed expiring key
+Thu Jun 06 21:48:03 2017 TLS: soft reset sec=-1 bytes=39332/-1 pkts=762/0
+Thu Jun 06 21:48:03 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 21:48:03 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 21:48:03 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 21:48:03 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 21:48:03 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 21:48:03 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 22:48:03 2017 TLS: soft reset sec=0 bytes=38318/-1 pkts=758/0
+Thu Jun 06 22:48:03 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 22:48:03 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 22:48:03 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 22:48:04 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 22:48:04 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 22:48:04 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Thu Jun 06 23:48:03 2017 TLS: tls_process: killed expiring key
+Thu Jun 06 23:48:04 2017 TLS: soft reset sec=0 bytes=39116/-1 pkts=763/0
+Thu Jun 06 23:48:04 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 23:48:04 2017 VERIFY OK: nsCertType=SERVER
+Thu Jun 06 23:48:04 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Thu Jun 06 23:48:05 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 23:48:05 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Thu Jun 06 23:48:05 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 00:48:04 2017 TLS: tls_process: killed expiring key
+Fri Jun 07 00:48:05 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 00:48:05 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 00:48:05 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 00:48:05 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 00:48:05 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 00:48:05 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 01:48:05 2017 TLS: soft reset sec=0 bytes=38173/-1 pkts=757/0
+Fri Jun 07 01:48:05 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 01:48:05 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 01:48:05 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 01:48:05 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 01:48:05 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 01:48:05 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 02:48:05 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 02:48:05 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 02:48:05 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 02:48:05 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 02:48:05 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 02:48:05 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 03:48:05 2017 TLS: soft reset sec=0 bytes=39060/-1 pkts=766/0
+Fri Jun 07 03:48:06 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 03:48:06 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 03:48:06 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 03:48:06 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 03:48:06 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 03:48:06 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 04:48:05 2017 TLS: tls_process: killed expiring key
+Fri Jun 07 04:48:06 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 04:48:06 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 04:48:06 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 04:48:06 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 04:48:06 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 04:48:06 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 05:48:06 2017 TLS: soft reset sec=0 bytes=38132/-1 pkts=756/0
+Fri Jun 07 05:48:06 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 05:48:06 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 05:48:06 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 05:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 05:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 05:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 06:48:06 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 06:48:06 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 06:48:06 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 06:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 06:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 06:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 07:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 07:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 07:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 07:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 07:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 07:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 08:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 08:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 08:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 08:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 08:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 08:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 09:48:07 2017 TLS: soft reset sec=0 bytes=39277/-1 pkts=761/0
+Fri Jun 07 09:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 09:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 09:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 09:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 09:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 09:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 10:48:07 2017 TLS: soft reset sec=0 bytes=38284/-1 pkts=760/0
+Fri Jun 07 10:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 10:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 10:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 10:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 10:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 10:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 11:48:07 2017 TLS: soft reset sec=0 bytes=38210/-1 pkts=758/0
+Fri Jun 07 11:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 11:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 11:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 11:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 11:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 11:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 12:48:07 2017 TLS: soft reset sec=0 bytes=38585/-1 pkts=759/0
+Fri Jun 07 12:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 12:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 12:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 12:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 12:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 12:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 13:48:08 2017 TLS: soft reset sec=-1 bytes=38210/-1 pkts=758/0
+Fri Jun 07 13:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 13:48:08 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 13:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 13:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 13:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 13:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 14:48:08 2017 TLS: soft reset sec=0 bytes=39551/-1 pkts=765/0
+Fri Jun 07 14:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 14:48:08 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 14:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 14:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 14:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 14:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 15:48:08 2017 TLS: soft reset sec=0 bytes=39134/-1 pkts=766/0
+Fri Jun 07 15:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 15:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 15:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 15:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 15:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 15:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 16:48:08 2017 TLS: tls_process: killed expiring key
+Fri Jun 07 16:48:09 2017 TLS: soft reset sec=0 bytes=40346/-1 pkts=773/0
+Fri Jun 07 16:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 16:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 16:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 16:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 16:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 16:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 17:48:09 2017 TLS: soft reset sec=0 bytes=38336/-1 pkts=758/0
+Fri Jun 07 17:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 17:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 17:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 17:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 17:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 17:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 18:48:09 2017 TLS: soft reset sec=0 bytes=38355/-1 pkts=759/0
+Fri Jun 07 18:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 18:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 18:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 18:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 18:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 18:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 19:48:09 2017 TLS: soft reset sec=0 bytes=39180/-1 pkts=758/0
+Fri Jun 07 19:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 19:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 19:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 19:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 19:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 19:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 20:48:09 2017 TLS: soft reset sec=0 bytes=38504/-1 pkts=760/0
+Fri Jun 07 20:48:09 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 20:48:09 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 20:48:09 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 20:48:09 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 20:48:09 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 20:48:09 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 21:48:09 2017 TLS: soft reset sec=0 bytes=39051/-1 pkts=761/0
+Fri Jun 07 21:48:10 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 21:48:10 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 21:48:10 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 21:48:10 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 21:48:10 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 21:48:10 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 22:48:09 2017 TLS: tls_process: killed expiring key
+Fri Jun 07 22:48:10 2017 TLS: soft reset sec=0 bytes=38173/-1 pkts=757/0
+Fri Jun 07 22:48:10 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 22:48:10 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 22:48:10 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 22:48:10 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 22:48:10 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 22:48:10 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Fri Jun 07 23:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 23:48:07 2017 VERIFY OK: nsCertType=SERVER
+Fri Jun 07 23:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Fri Jun 07 23:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 23:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Fri Jun 07 23:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 00:48:07 2017 TLS: soft reset sec=0 bytes=39347/-1 pkts=763/0
+Sat Jun 08 00:48:07 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 00:48:07 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 00:48:07 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 00:48:07 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 00:48:07 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 00:48:07 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 01:48:07 2017 TLS: soft reset sec=0 bytes=38355/-1 pkts=759/0
+Sat Jun 08 01:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 01:48:08 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 01:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 01:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 01:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 01:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 02:48:07 2017 TLS: tls_process: killed expiring key
+Sat Jun 08 02:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 02:48:08 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 02:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 02:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 02:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 02:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 03:48:08 2017 TLS: soft reset sec=0 bytes=38173/-1 pkts=757/0
+Sat Jun 08 03:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 03:48:08 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 03:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 03:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 03:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 03:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 04:48:08 2017 TLS: soft reset sec=0 bytes=39433/-1 pkts=763/0
+Sat Jun 08 04:48:08 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 04:48:08 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 04:48:08 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 04:48:08 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 04:48:08 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 04:48:08 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 05:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 05:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 05:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 05:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 05:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 05:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 06:47:41 2017 TLS: soft reset sec=0 bytes=38132/-1 pkts=756/0
+Sat Jun 08 06:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 06:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 06:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 06:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 06:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 06:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 07:47:41 2017 TLS: soft reset sec=0 bytes=39177/-1 pkts=761/0
+Sat Jun 08 07:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 07:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 07:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 07:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 07:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 07:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 08:47:41 2017 TLS: soft reset sec=0 bytes=38351/-1 pkts=759/0
+Sat Jun 08 08:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 08:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 08:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 08:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 08:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 08:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 09:47:41 2017 TLS: soft reset sec=0 bytes=38279/-1 pkts=757/0
+Sat Jun 08 09:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 09:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 09:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 09:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 09:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 09:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 10:47:41 2017 TLS: soft reset sec=0 bytes=38518/-1 pkts=760/0
+Sat Jun 08 10:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 10:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 10:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 10:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 10:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 10:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 11:47:41 2017 TLS: soft reset sec=0 bytes=38136/-1 pkts=756/0
+Sat Jun 08 11:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 11:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 11:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 11:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 11:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 11:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 12:47:41 2017 TLS: soft reset sec=0 bytes=39551/-1 pkts=765/0
+Sat Jun 08 12:47:41 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 12:47:41 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 12:47:41 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 12:47:41 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 12:47:41 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 12:47:41 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 13:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 13:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 13:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 13:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 13:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 13:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 14:47:41 2017 TLS: tls_process: killed expiring key
+Sat Jun 08 14:47:42 2017 TLS: soft reset sec=0 bytes=38177/-1 pkts=757/0
+Sat Jun 08 14:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 14:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 14:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 14:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 14:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 14:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 15:47:42 2017 TLS: soft reset sec=0 bytes=38325/-1 pkts=755/0
+Sat Jun 08 15:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 15:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 15:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 15:47:43 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 15:47:43 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 15:47:43 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 16:47:42 2017 TLS: tls_process: killed expiring key
+Sat Jun 08 16:47:43 2017 TLS: soft reset sec=0 bytes=40043/-1 pkts=771/0
+Sat Jun 08 16:47:43 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 16:47:43 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 16:47:43 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 16:47:43 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 16:47:43 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 16:47:43 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 17:47:43 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 17:47:43 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 17:47:43 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 17:47:43 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 17:47:43 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 17:47:43 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 18:47:43 2017 TLS: soft reset sec=0 bytes=38307/-1 pkts=759/0
+Sat Jun 08 18:47:43 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 18:47:43 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 18:47:43 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 18:47:43 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 18:47:43 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 18:47:43 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 19:47:43 2017 TLS: soft reset sec=0 bytes=38859/-1 pkts=759/0
+Sat Jun 08 19:47:43 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 19:47:43 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 19:47:43 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 19:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 19:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 19:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 20:47:43 2017 TLS: tls_process: killed expiring key
+Sat Jun 08 20:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 20:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 20:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 20:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 20:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 20:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 21:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 21:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 21:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 21:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 21:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 21:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 22:47:44 2017 TLS: soft reset sec=0 bytes=39410/-1 pkts=764/0
+Sat Jun 08 22:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 22:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 22:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 22:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 22:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 22:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sat Jun 08 23:47:44 2017 TLS: soft reset sec=0 bytes=38173/-1 pkts=757/0
+Sat Jun 08 23:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 23:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sat Jun 08 23:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sat Jun 08 23:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 23:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sat Jun 08 23:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 00:47:44 2017 TLS: tls_process: killed expiring key
+Sun Jun 09 00:47:45 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 00:47:45 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 00:47:45 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 00:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 00:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 00:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 01:47:45 2017 TLS: soft reset sec=0 bytes=38095/-1 pkts=755/0
+Sun Jun 09 01:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 01:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 01:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 01:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 01:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 01:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 02:47:45 2017 TLS: tls_process: killed expiring key
+Sun Jun 09 02:47:46 2017 TLS: soft reset sec=0 bytes=38574/-1 pkts=762/0
+Sun Jun 09 02:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 02:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 02:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 02:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 02:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 02:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 03:47:46 2017 TLS: soft reset sec=0 bytes=38617/-1 pkts=759/0
+Sun Jun 09 03:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 03:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 03:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 03:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 03:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 03:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 04:47:46 2017 TLS: soft reset sec=0 bytes=38821/-1 pkts=759/0
+Sun Jun 09 04:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 04:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 04:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 04:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 04:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 04:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 05:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 05:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 05:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 05:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 05:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 05:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 06:47:42 2017 TLS: soft reset sec=0 bytes=38500/-1 pkts=760/0
+Sun Jun 09 06:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 06:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 06:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 06:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 06:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 06:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 07:47:42 2017 TLS: soft reset sec=0 bytes=38214/-1 pkts=758/0
+Sun Jun 09 07:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 07:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 07:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 07:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 07:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 07:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 08:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 08:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 08:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 08:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 08:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 08:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 09:47:42 2017 TLS: soft reset sec=0 bytes=38173/-1 pkts=757/0
+Sun Jun 09 09:47:42 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 09:47:42 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 09:47:42 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 09:47:42 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 09:47:42 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 09:47:42 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 10:47:43 2017 TLS: soft reset sec=-1 bytes=39392/-1 pkts=764/0
+Sun Jun 09 10:47:43 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 10:47:43 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 10:47:43 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 10:47:43 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 10:47:43 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 10:47:43 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 11:47:44 2017 TLS: soft reset sec=-1 bytes=38874/-1 pkts=764/0
+Sun Jun 09 11:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 11:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 11:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 11:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 11:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 11:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 12:47:44 2017 TLS: soft reset sec=0 bytes=38500/-1 pkts=760/0
+Sun Jun 09 12:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 12:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 12:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 12:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 12:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 12:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 13:47:44 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 13:47:44 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 13:47:44 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 13:47:44 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 13:47:44 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 13:47:44 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 14:47:45 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 14:47:45 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 14:47:45 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 14:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 14:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 14:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 15:47:44 2017 TLS: tls_process: killed expiring key
+Sun Jun 09 15:47:45 2017 TLS: soft reset sec=0 bytes=39369/-1 pkts=763/0
+Sun Jun 09 15:47:45 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 15:47:45 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 15:47:45 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 15:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 15:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 15:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 16:47:45 2017 TLS: soft reset sec=0 bytes=39472/-1 pkts=768/0
+Sun Jun 09 16:47:45 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 16:47:45 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 16:47:45 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 16:47:45 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 16:47:45 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 16:47:45 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 17:47:45 2017 TLS: soft reset sec=0 bytes=38874/-1 pkts=760/0
+Sun Jun 09 17:47:45 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 17:47:45 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 17:47:45 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 17:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 17:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 17:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 18:47:45 2017 TLS: tls_process: killed expiring key
+Sun Jun 09 18:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 18:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 18:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 18:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 18:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 18:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 19:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 19:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 19:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 19:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 19:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 19:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 20:47:46 2017 TLS: soft reset sec=0 bytes=39518/-1 pkts=764/0
+Sun Jun 09 20:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 20:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 20:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 20:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 20:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 20:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 21:47:46 2017 TLS: soft reset sec=0 bytes=38095/-1 pkts=755/0
+Sun Jun 09 21:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 21:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 21:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 21:47:46 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 21:47:46 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 21:47:46 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 22:47:46 2017 TLS: soft reset sec=0 bytes=40180/-1 pkts=772/0
+Sun Jun 09 22:47:46 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 22:47:46 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 22:47:46 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 22:47:47 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 22:47:47 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 22:47:47 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Sun Jun 09 23:47:46 2017 TLS: tls_process: killed expiring key
+Sun Jun 09 23:47:47 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 23:47:47 2017 VERIFY OK: nsCertType=SERVER
+Sun Jun 09 23:47:47 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Sun Jun 09 23:47:47 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 23:47:47 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Jun 09 23:47:47 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 00:47:47 2017 TLS: soft reset sec=0 bytes=38433/-1 pkts=761/0
+Mon Jun 10 00:47:47 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 00:47:47 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 00:47:47 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 00:47:47 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 00:47:47 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 00:47:47 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 01:47:47 2017 TLS: soft reset sec=0 bytes=38694/-1 pkts=758/0
+Mon Jun 10 01:47:47 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 01:47:47 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 01:47:47 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 01:47:47 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 01:47:47 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 01:47:47 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 02:47:47 2017 TLS: soft reset sec=0 bytes=38136/-1 pkts=756/0
+Mon Jun 10 02:47:47 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 02:47:47 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 02:47:47 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 02:47:47 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 02:47:47 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 02:47:47 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 03:47:47 2017 TLS: soft reset sec=0 bytes=39578/-1 pkts=766/0
+Mon Jun 10 03:47:48 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 03:47:48 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 03:47:48 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 03:47:48 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 03:47:48 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 03:47:48 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 04:47:47 2017 TLS: tls_process: killed expiring key
+Mon Jun 10 04:47:48 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 04:47:48 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 04:47:48 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 04:47:49 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 04:47:49 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 04:47:49 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 05:47:48 2017 TLS: tls_process: killed expiring key
+Mon Jun 10 05:47:49 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 05:47:49 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 05:47:49 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 05:47:50 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 05:47:50 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 05:47:50 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 06:47:49 2017 TLS: tls_process: killed expiring key
+Mon Jun 10 06:47:50 2017 TLS: soft reset sec=0 bytes=38491/-1 pkts=759/0
+Mon Jun 10 06:47:50 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 06:47:50 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 06:47:50 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 06:47:51 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 06:47:51 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 06:47:51 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 07:47:50 2017 TLS: tls_process: killed expiring key
+Mon Jun 10 07:47:52 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 07:47:52 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 07:47:52 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 07:47:52 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 07:47:52 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 07:47:52 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 08:47:51 2017 TLS: tls_process: killed expiring key
+Mon Jun 10 08:47:52 2017 TLS: soft reset sec=0 bytes=39622/-1 pkts=764/0
+Mon Jun 10 08:47:52 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 08:47:52 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 08:47:52 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 08:47:52 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 08:47:52 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 08:47:52 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
+Mon Jun 10 09:47:52 2017 VERIFY OK: depth=1, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 09:47:52 2017 VERIFY OK: nsCertType=SERVER
+Mon Jun 10 09:47:52 2017 VERIFY OK: depth=0, C=US, ST=TX\09, L=Mountain View\09, O=MyCompany, OU=TerraFirma, CN=mywebsite.com, name=TerraFirma Remotes, emailAddress=admin@mywebsite.com
+Mon Jun 10 09:47:53 2017 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 09:47:53 2017 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Mon Jun 10 09:47:53 2017 Control Channel: TLSv1.2, cipher TLSv1/SSLv3 ECDHE-RSA-AES256-GCM-SHA384, 1024 bit RSA
